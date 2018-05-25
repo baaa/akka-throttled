@@ -1,0 +1,9 @@
+.idea
+target/
+project/target/
+.DS_Store
+derby.log
+metastore_db
+venv
+*.sc
+src/main/resources/dev/samples/
