@@ -1,11 +1,33 @@
+import ReleaseTransformations._
+
 resolvers ++= Seq(
   Resolver.jcenterRepo
 )
 
 name := "akka-throttled"
 organization := "com.mehmetyucel"
-version := "0.0.1"
+version := "0.0.1-SNAPSHOT"
 scalaVersion := "2.12.2"
+crossScalaVersions := Seq("2.11.11", "2.12.2")
+
+
+releaseCrossBuild := true
+
+releaseProcess := Seq[ReleaseStep](
+  checkSnapshotDependencies,
+  inquireVersions,
+  runClean,
+  runTest,
+  setReleaseVersion,
+  commitReleaseVersion,
+  tagRelease,
+  // For non cross-build projects, use releaseStepCommand("publishSigned")
+  releaseStepCommandAndRemaining("+publishSigned"),
+  setNextVersion,
+  commitNextVersion,
+  releaseStepCommand("sonatypeReleaseAll"),
+  pushChanges
+)
 
 val compileDependencies = Seq(
   "com.typesafe" % "config" % "1.3.1",
