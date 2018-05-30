@@ -8,7 +8,7 @@ pgpSecretRing := file("""C:\Users\kali\.sbt\gpg\secring.asc""")
 pgpPublicRing := file("""C:\Users\kali\.sbt\gpg\pubring.asc""")
 //pgpSecretRing := file("""C:\Users\kali\AppData\Local\lxss\home\kali\.gnupg\secring.gpg""")
 //pgpPublicRing := file("""C:\Users\kali\AppData\Local\lxss\home\kali\.gnupg\pubring.gpg""")
-usePgpKeyHex("c500a525a2efcb99")
+usePgpKeyHex("c500a525a2efcb90")
 
 name := "akka-throttled"
 organization := "com.mehmetyucel"
