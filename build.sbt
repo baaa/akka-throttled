@@ -12,7 +12,7 @@ usePgpKeyHex("c500a525a2efcb99")
 
 name := "akka-throttled"
 organization := "com.mehmetyucel"
-version := "0.0.2-SNAPSHOT"
+version := "0.0.2"
 scalaVersion := "2.12.2"
 crossScalaVersions := Seq("2.11.11", "2.12.2")
 
