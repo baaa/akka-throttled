@@ -4,6 +4,10 @@ resolvers ++= Seq(
   Resolver.jcenterRepo
 )
 
+pgpSecretRing := file("""C:\Users\kali\AppData\Local\lxss\home\kali\.gnupg\secring.gpg""")
+pgpPublicRing := file("""C:\Users\kali\AppData\Local\lxss\home\kali\.gnupg\pubring.gpg""")
+usePgpKeyHex("c500a525a2efcb99")
+
 name := "akka-throttled"
 organization := "com.mehmetyucel"
 version := "0.0.1-SNAPSHOT"
